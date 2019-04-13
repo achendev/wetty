@@ -1,10 +1,12 @@
 #! /usr/bin/env node
 /* eslint-disable typescript/no-var-requires */
-
+//let cldid = process.argv.slice(2);
 const yargs = require('yargs');
 const wetty = require('./dist').default;
-
 module.exports = wetty.wetty;
+
+global.cldid = process.argv[2];
+console.log(cldid);
 
 /**
  * Check if being run by cli or require
